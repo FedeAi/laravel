@@ -7,7 +7,7 @@
             
             <div id="content">
                 <div class="title">
-                    <h1><a href="/articles/{{$article->id}}"> {{$article->title}} </a></h1>
+                <h1><a href="{{ route('articles.show', $article)}}"> {{$article->title}} </a></h1>
                 </div>
                 <p><img src="/images/banner.jpg" alt="" class="image image-full" /> </p>
                 <p>{{$article->excerpt}} </p>
