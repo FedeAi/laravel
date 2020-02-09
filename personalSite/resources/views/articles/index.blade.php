@@ -15,8 +15,10 @@
 
     <div class="features">
         @forelse ($articles as $article)
+        
         <article>
             <div class="content">
+                <span class="image fit"><img src="images/pic01.jpg" alt="" /></span>
                 <h3><a href="{{ route('articles.show', $article)}}"> {{$article->title}} </a></h3>
                 <p>{!!$article->excerpt!!}</p>
             </div>
