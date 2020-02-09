@@ -13,7 +13,9 @@
 
 
 Route::get('/', function () {
-    return view('home');
+    return view('home', [
+        'articles' => App\Article::take(3)->latest()->get()
+    ]);
 })->middleware('navbar');
 
 Route::get('/articles','ArticlesController@index')->name('articles.index')->middleware('navbar');
